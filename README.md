@@ -1,5 +1,6 @@
 ## 工程
 - 画像認識に関する情報調べ:1.25h
+- 画像認識に関する処理確認:1.5h
 - 音声認識に関する情報調べ:0.25h
 
 ## 画像認識(python)
@@ -31,3 +32,5 @@ python3
 python -m pip install PIL pyscreenshot
 python -m pip install pygetwindow
 python -m pip install pyinstaller
+python -m pip install pypiwin32
+python -m pip install pywinauto
