@@ -29,7 +29,8 @@
 python3
 
 ## module
-python -m pip install PIL pyscreenshot
+python -m pip install Pillow
+python -m pip install pyscreenshot
 python -m pip install pygetwindow
 python -m pip install pyinstaller
 python -m pip install pypiwin32

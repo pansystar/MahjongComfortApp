@@ -13,12 +13,19 @@ class Setting:
         self.frame = [112, -8, -8, 8]
 
 class MahjongSoul:
-    def RefreshWindowSize():
-        
+
+    def CaptureToImage():
+        return 0
+
+    def RefreshWindowSize():        
         return 0
     
     def __init__(self, handle):
         self.handle = handle
+        self.app = Application().connect(handle=handle)
+        self.navwin = self.app.window(handle=handle)
+        self.w_aspect = 16
+        self.h_aspect = 9
 
 
 def MAKELPARAM(p, p_2):
@@ -27,7 +34,7 @@ def MAKELPARAM(p, p_2):
 
 setting = Setting()
 
-# スクショ
+# イメージインスタンス
 img = ImageGrab.grab()
 
 # データをバッファに格納
@@ -61,24 +68,21 @@ if(handle != None):
     h = rect.bottom - rect.top
 
     # アスペクト比で割ったチャンクごとのサイズを取得
-    w_aspect = w / 16 
-    h_aspect = h / 9
+    w_item = w / game.w_aspect 
+    h_item = h / game.h_aspect
 
     # 黒余白部を削除し
     # ゲームウィンドウサイズを取得
-    if(w_aspect < h_aspect):
-        h_temp = (h - w_aspect * 9) / 2
+    if(w_item < h_item):
+        h_temp = (h - w_item * game.h_aspect) / 2
         rect.top = int(rect.top + h_temp)
         rect.bottom = int(rect.bottom - h_temp)
     else:
-        w_temp = (w - h_aspect * 16) / 2
-        rect.left = int(rect.left + h_temp)
-        rect.right = int(rect.right - h_temp)
-
+        w_temp = (w - h_item * game.w_aspect ) / 2
+        rect.left = int(rect.left + w_temp)
+        rect.right = int(rect.right - w_temp)
 
     navwin.CaptureAsImage(rect).save("resize.png")
-    pixel = img.getpixel((9,size[1] - 9))
-
     
     img.save(buffer, "BMP")
 
