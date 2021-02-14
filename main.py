@@ -39,12 +39,14 @@ if(handle != None):
     julius = Julius()
     hai_list = list()
 
+    # 特別アクションを登録しておく
     special_command_dict = {
         "ツモ切り": game.CutTheTsumo,
         "スキップ": game.Skip,
         "チー": game.Chi,
         "ポン": game.Pon,
         "ロン": game.Pon,
+        "カン": game.Pon,
         "ツモ": game.Pon,
         "立直": game.Pon,
     }
@@ -56,13 +58,13 @@ if(handle != None):
             game.Update()
             julius.Update()
                 
+            # juliusのテキストが入っていたら、処理を行う
             if julius.text != "":
-
                 if julius.text in special_command_dict:
                     special_command_dict[julius.text]()
                 else:
                     img_list = game.CaptureToImage()
-                    
+
                     for item in img_list:
                         # イメージインスタンス
                         img = np.asarray(item)
@@ -70,27 +72,19 @@ if(handle != None):
                         result = itemControl.analyze(img)
                         hai_list.append(result)
 
-                    for i in range(len(hai_list)):
-                        if hai_list[i].name == julius.text:
-                            game.CutTehai(i)
+                    # 赤を捨てるときはゲーム仕様より、左側の牌を捨てる
+                    if julius.text.startswith("赤"):
+                        for i in range(len(hai_list)):
+                            if hai_list[i].name == julius.text:
+                                game.CutTehai(i)
+                                break
+                    else:
+                        for i in range(len(hai_list) - 1, -1, -1):
+                            if hai_list[i].name == julius.text:
+                                game.CutTehai(i)
+                                break
                     
                 julius.text = ""
-
-                
-                # if "ツモ切り" == julius.text:
-                #     game.CutTheTsumo()
-                # if "スキップ" == julius.text:
-                #     game.Skip()
-                # if "チー" == julius.text:
-                #     game.Chi()
-                # if "ポン" == julius.text:
-                #     game.Pon()
-                # if "ロン" == julius.text:
-                #     game.Pon()
-                # if "ツモ" == julius.text:
-                #     game.Pon()
-                # if "立直" == julius.text:
-                #     game.Pon()
         except:
             julius.text = ""
         

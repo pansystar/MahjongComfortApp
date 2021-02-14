@@ -120,15 +120,19 @@ class MahjongSoul:
         # print('per = %f, x = %d, y = %d' % (self.per, click_x, click_y))
         
         ## ダブルクリックが必要
+        # ctypes.windll.user32.SendMessageW(self.handle, 0x0203, 0, MAKELPARAM(click_x, click_y))
         self.Click(click_x, click_y)
         self.Click(click_x, click_y)
+    def ClickBrank(self):
+        self.DoubleClick(258 + (-1 * 96), 992)
 
     def CutTehai(self,index):
         # 一番左が0, 右が12
         x = 258 + (index * 96)
         y = 992
         self.DoubleClick(x, y)
-
+        time.sleep(0.25)
+        self.ClickBrank()
     # ツモ切り
     def CutTheTsumo(self):
         # 1920x1080時の座標
@@ -139,6 +143,7 @@ class MahjongSoul:
             self.DoubleClick(x[i], y)
             time.sleep(0.25)
 
+        self.ClickBrank()
     
     def Skip(self):
         # 1920x1080時の座標
@@ -147,6 +152,8 @@ class MahjongSoul:
 
         self.Click(x, y)
         
+        time.sleep(0.25)
+
     def Chi(self):
         # 1920x1080時の座標
         x = 1037
@@ -154,12 +161,16 @@ class MahjongSoul:
 
         self.Click(x, y)
         
+        time.sleep(0.25)
+
     def Pon(self):
         # 1920x1080時の座標
         x = 1037
         y = 833
 
         self.Click(x, y)
+
+        time.sleep(0.25)
 
 # Utilityのメソッド
 def MAKELPARAM(p, p_2):
