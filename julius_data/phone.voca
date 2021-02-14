@@ -1,0 +1,96 @@
+% RON
+ロン	r o N
+% TSUMO
+ツモ	ts u m o
+% CHI
+チー	ch i:
+% PON
+ポン	p o N
+% KAN
+カン	k a N
+% TON
+東	t o N
+% NAN
+南	n a N
+% SHA
+西	sh a:
+% PE
+北	p e:
+% HAKU
+白	h a k u
+% HATSU
+發	h a ts u
+% CHUN
+中	ch u N
+% MAN_1
+一萬	i: m a N
+% MAN_2
+二萬	ry a N m a N
+% MAN_3
+三萬	s a N m a N
+% MAN_4
+四萬	s u: m a N
+% MAN_5
+五萬	u: m a N
+% MAN_6
+六萬	r o: m a N
+% MAN_7
+七萬	ch i: m a N
+% MAN_8
+八萬	p a: m a N
+% MAN_9
+九萬	ky u u m a N
+% SO_1
+一索	i: s o:
+% SO_2
+二索	ry a N s o:
+% SO_3
+三索	s a N z o:
+% SO_4
+四索	s u: s o:
+% SO_5
+五索	u: s o:
+% SO_6
+六索	r o: s o:
+% SO_7
+七索	ch i: s o:
+% SO_8
+八索	p a: s o:
+% SO_9
+九索	ky u u s o:
+% PIN_1
+一筒	i: p i N
+% PIN_2
+二筒	ry a N p i N
+% PIN_3
+三筒	s a N p i N
+% PIN_4
+四筒	s u: p i N
+% PIN_5
+五筒	u: p i N
+% PIN_6
+六筒	r o: p i N
+% PIN_7
+七筒	ch i: p i N
+% PIN_8
+八筒	p a: p i N
+% PIN_9
+九筒	ky u u p i N
+% MAN_5_AKA
+赤五萬	a k a u: m a N
+% SO_5_AKA
+赤五索	a k a u: s o:
+% PIN_5_AKA
+赤五筒	a k a u: p i N
+% TSUMOGIRI
+ツモ切り	ts u m o g i r i
+% KYUSHUKYUHAI
+九種九牌	ky u u sh u ky u u h a i
+% SKIP
+スキップ	s u k i q p u
+% RIICHI
+立直	r i: ch i
+% NS_B
+[s]             silB
+% NS_E
+[/s]            silE

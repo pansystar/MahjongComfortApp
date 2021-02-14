@@ -1,0 +1,48 @@
+0	[ロン]	r o N
+1	[ツモ]	ts u m o
+2	[チー]	ch i:
+3	[ポン]	p o N
+4	[カン]	k a N
+5	[東]	t o N
+6	[南]	n a N
+7	[西]	sh a:
+8	[北]	p e:
+9	[白]	h a k u
+10	[發]	h a ts u
+11	[中]	ch u N
+12	[一萬]	i: m a N
+13	[二萬]	ry a N m a N
+14	[三萬]	s a N m a N
+15	[四萬]	s u: m a N
+16	[五萬]	u: m a N
+17	[六萬]	r o: m a N
+18	[七萬]	ch i: m a N
+19	[八萬]	p a: m a N
+20	[九萬]	ky u u m a N
+21	[一索]	i: s o:
+22	[二索]	ry a N s o:
+23	[三索]	s a N z o:
+24	[四索]	s u: s o:
+25	[五索]	u: s o:
+26	[六索]	r o: s o:
+27	[七索]	ch i: s o:
+28	[八索]	p a: s o:
+29	[九索]	ky u u s o:
+30	[一筒]	i: p i N
+31	[二筒]	ry a N p i N
+32	[三筒]	s a N p i N
+33	[四筒]	s u: p i N
+34	[五筒]	u: p i N
+35	[六筒]	r o: p i N
+36	[七筒]	ch i: p i N
+37	[八筒]	p a: p i N
+38	[九筒]	ky u u p i N
+39	[赤五萬]	a k a u: m a N
+40	[赤五索]	a k a u: s o:
+41	[赤五筒]	a k a u: p i N
+42	[ツモ切り]	ts u m o g i r i
+43	[九種九牌]	ky u u sh u ky u u h a i
+44	[スキップ]	s u k i q p u
+45	[立直]	r i: ch i
+46	[[s]]	silB
+47	[[/s]]	silE
