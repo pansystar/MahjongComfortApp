@@ -11,9 +11,12 @@ from pywinauto.win32structures import RECT
 from MahjongSoul import *
 from MahjongSoulImage.itemControl import *
 from Julius import *
-
+import eel
 
 itemControl = ItemControl()
+
+eel.init("web")
+eel.start("main.html", port=8500, block=False)
 
 # template = cv2.imread("template1.png", 0)
 
@@ -54,7 +57,6 @@ if(handle != None):
     while True:
         try:
             hai_list.clear()
-            time.sleep(1.0)
             game.Update()
             julius.Update()
                 
@@ -88,5 +90,6 @@ if(handle != None):
         except:
             julius.text = ""
         
+        eel.sleep(1.0)
 else:
     print("雀魂が見つからなかったため、終了します。")
