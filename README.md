@@ -25,6 +25,17 @@
   - ツモ
   - 数字
 
+## 必要
+* Perl
+* Python
+
+## 環境
+* Julius
+C:\julius\bin\yomi2voca.pl
+
+* dictation-kit
+‪C:\dictation-kit\am-gmm.jconf
+
 ## kankyou 
 python3
 

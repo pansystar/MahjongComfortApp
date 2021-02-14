@@ -1,0 +1,5 @@
+perl julius-4.6-win32bin\bin\yomi2voca.pl Python\MahjongComfortApp\mahjong.yomi > phone.phone
+
+perl julius-4.6-win32bin\bin\mkdfa.pl phone
+
+julius -C C:\dictation-kit\am-gmm.jconf -nostrip -gram julius_data\phone -input mic -module

@@ -46,6 +46,7 @@ if(handle != None):
             julius.Update()
 
             img_list = game.CaptureToImage()
+            
             for item in img_list:              
                 # イメージインスタンス
                 img = np.asarray(item)
