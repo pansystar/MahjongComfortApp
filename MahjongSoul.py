@@ -33,7 +33,7 @@ class MahjongSoul:
                 , self.rectMaster.left + self.setting.frame[3] + self.left_margin + int((left + (item_width * num)) * self.per) + int(item_width * self.per)
                 , self.rectMaster.top + self.setting.frame[0] + self.top_margin + int(top * self.per) + int(height * self.per))
 
-            img = self.navwin.CaptureAsImage(rect=rect)
+            img = self.navwin.capture_as_image(rect=rect)
             # img.save(str(num) + ".png")
             result.append(img)
 
@@ -45,8 +45,8 @@ class MahjongSoul:
         self.setting = setting
         # img = navwin.CaptureAsImage(rect=RECT(200, 36, 250, 53))
         # windowサイズを取得
-        rect = self.navwin.Rectangle() 
-        self.rectMaster = self.navwin.Rectangle() 
+        rect = self.navwin.rectangle() 
+        self.rectMaster = self.navwin.rectangle() 
         # ウィンドウ枠を除去
         rect.top = rect.top + setting.frame[0]
         rect.right = rect.right + setting.frame[1]
@@ -89,7 +89,7 @@ class MahjongSoul:
         return 0
 
     def Update(self):
-        rect = self.navwin.Rectangle() 
+        rect = self.navwin.rectangle() 
         if(self.rectMaster != rect):
             self.RefreshWindowSize()
         return
