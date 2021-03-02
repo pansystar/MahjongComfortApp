@@ -46,7 +46,10 @@ python -m pip install opencv-python
 python -m pip install eel
 ```
 
-### 実行
+## 実行
 Google Chrome(ブックマークバー有)で雀魂を起動した後、以下のコマンドを入力してください。
 - GUIアプリを起動する場合 python main-gui.py
 - コンソールで起動する場合 python main.py
+
+## さいごに
+つらつらと書きましたが、まだこのメモで動作したか確認は取れてません。
