@@ -1,48 +1,52 @@
-## 工程
-- 画像認識に関する情報調べ:1.25h
-- 画像認識に関する処理確認:1.5h
-- 音声認識に関する情報調べ:0.25h
+# MahjongComfortApp
 
-## 画像認識(python)
-- ウィンドウハンドルの取得
-- ゲーム画面部のサイズを計算
-- 画面スクショ
+## はじめに
 
-## キー入力による打牌選択
-- 手牌の左側から1,2,3,4,5,6,7,8,9,0,-,^,\
-- ツモ切りは、
-- チーの組み合わせ選択は、左から1,2,…
+## 動作確認済環境
+- OS : Windows 10 Pro
+- CPU : Ryzen 7 3700X
+- GPU : NVIDIA GeFOrce RTX 2060 SUPER
+- MIC : SHURE mv7
 
-## 音声認識 ※最終目標(python)
-- 音声認識エンジン Julius を利用する
-- 
 
-- 自分の声で辞書を作成
-  - 1～9索萬筒子
-  - 三元風牌
-  - ロン, ポン, カン, チー
-  - ツモ切り
-  - ツモ
-  - 数字
+## 準備
+本アプリケーションは、外部ツールを駆使して作動する構造となっています。必要なソフトの導入手順を以下に記します。※すべて無料です。
 
-## 必要
-* Perl
-* Python
+### Python
+本アプリケーションは、Python言語で書かれているため、Pythonをインストールしておく必要があります。
+下記URLから、ダウンロード&インストールしてください。
+[Python Downloads](https://www.python.org/downloads/)
 
-## 環境
-* Julius
-C:\julius\bin\yomi2voca.pl
+インストールが完了したら、コマンドプロンプトを開き、以下のコマンドを入力して、Pythonのバージョンが表示されることを確認してください。
 
-* dictation-kit
-‪C:\dictation-kit\am-gmm.jconf
+```cmd:例
+python --version
+Python 3.8.2
+```
 
-## kankyou 
-python3
+### OpenCV
+本アプリの画像認識で利用します。以下のコマンドを入力し、実行してください。
+```cmd:例
+python -m pip install opencv-python
+```
 
-## module
-python -m pip install Pillow
-python -m pip install pyscreenshot
-python -m pip install pygetwindow
-python -m pip install pyinstaller
-python -m pip install pypiwin32
-python -m pip install pywinauto
+### Julius
+本アプリの音声認識で利用します。以下のリンクに飛び、Juliusをdownloadしてください
+[Julius Releases](https://github.com/julius-speech/julius/releases)
+ダウンロードしたzip内にあるフォルダを、Cドライブ直下に置いてもらい、フォルダ名を「Julius」に変更してください
+
+また、dictation-kitもダウンロードする必要があります。以下のリンクからダウンロードしてください。(約500MB)
+※サイズが大きいため、代替できる方法が見つかり次第、本項目を修正します。
+
+ダウンロードしたzip内にあるフォルダを、Cドライブ直下に置いてもらい、フォルダ名を「dictation-kit」に変更してください。
+
+### Eel (※GUIアプリを使う場合)
+以下のコマンドを入力し、実行してください。
+```cmd:例
+python -m pip install eel
+```
+
+### 実行
+Google Chrome(ブックマークバー有)で雀魂を起動した後、以下のコマンドを入力してください。
+- GUIアプリを起動する場合 python main-gui.py
+- コンソールで起動する場合 python main.py
